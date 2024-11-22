@@ -8,7 +8,7 @@ const BarChart = ({ month }) => {
   useEffect(() => {
     const fetchBarChartData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/chart/bar?month=${month}`);
+        const response = await fetch(`https://practicewithapi.onrender.com/api/chart/bar?month=${month}`);
         const data = await response.json();
         setChartData(data); // Store the fetched data in the state
       } catch (error) {

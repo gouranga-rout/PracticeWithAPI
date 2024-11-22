@@ -10,7 +10,7 @@ body {
 
 /*table components*/
 .container {
-  background-color: pink;
+/*  background-color: pink;*/
 }
 
 .heading {
@@ -21,7 +21,7 @@ body {
 }
 
 .control {
-  background-color: lightblue;
+/*  background-color: lightblue;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +42,7 @@ body {
 }
 
 .content {
-  background-color: lightblue;
+  /*background-color: lightblue;*/
   padding: .2rem;
   margin: 2rem 1.5rem;
 }

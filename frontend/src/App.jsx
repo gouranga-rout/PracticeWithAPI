@@ -10,6 +10,7 @@ const App = () => {
   const [statistics, setStatistics] = useState({});
   const [pieChartData, setPieChartData] = useState({});
   const [barChartData, setBarChartData] = useState({});
+ 
 
   useEffect(() => {
     fetchTransactions();
@@ -17,27 +18,29 @@ const App = () => {
     fetchPieChartData();
     fetchBarChartData();
   }, [month]);
+  
+  
 
   const fetchTransactions = async () => {
-    const response = await fetch(`http://localhost:5000/api/transactions?month=${month}`);
+    const response = await fetch(`https://practicewithapi.onrender.com/api/transactions?month=${month}`);
     const data = await response.json();
     setTransactions(data.transactions);
   };
 
   const fetchStatistics = async () => {
-    const response = await fetch(`http://localhost:5000/api/statistics?month=${month}`);
+    const response = await fetch(`https://practicewithapi.onrender.com/api/statistics?month=${month}`);
     const data = await response.json();
     setStatistics(data);
   };
 
   const fetchPieChartData = async () => {
-    const response = await fetch(`http://localhost:5000/api/chart/pie?month=${month}`);
+    const response = await fetch(`https://practicewithapi.onrender.com/api/chart/pie?month=${month}`);
     const data = await response.json();
     setPieChartData(data);
   };
 
   const fetchBarChartData = async () => {
-    const response = await fetch(`http://localhost:5000/api/chart/bar?month=${month}`);
+    const response = await fetch(`https://practicewithapi.onrender.com/api/chart/bar?month=${month}`);
     const data = await response.json();
     setBarChartData(data);
   };
