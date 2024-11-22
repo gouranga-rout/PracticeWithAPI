@@ -1,1 +1,15 @@
-.env
+# Ignore node_modules for both frontend and backend
+/node_modules
+
+# Ignore build folders (frontend build output)
+frontend/build
+
+# Ignore build folders (backend build output, if any)
+backend/build
+
+# Ignore environment variables file (.env)
+backend/.env
+
+# Ignore logs
+*.log
+
